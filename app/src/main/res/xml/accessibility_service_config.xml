@@ -3,6 +3,6 @@
     android:accessibilityFeedbackType="feedbackGeneric"
     android:canRetrieveWindowContent="true"
     android:description="@string/app_name"
-    android:packageNames="com.ubercab.driver,com.ubercab"
+    android:packageNames="com.taxis99,com.taxis99.driver,com.didiglobal.driver.dididriver,com.didiglobal.passenger,com.didiglobal.driver"
     android:notificationTimeout="0"
     android:accessibilityFlags="flagRetrieveInteractiveWindows|flagIncludeNotImportantViews|flagReportViewIds" />

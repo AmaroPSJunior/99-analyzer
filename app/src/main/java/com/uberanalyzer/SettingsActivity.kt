@@ -49,10 +49,11 @@ class SettingsActivity : AppCompatActivity() {
         // Category Colors
         root.addView(TextView(this).apply { text = "Cores das Categorias"; setTextColor(Color.WHITE); textSize = 18f; setPadding(0, dp(30), 0, dp(10)) })
         
-        root.addView(createColorPickerSection("Uber X", SettingsManager.KEY_COLOR_UBER_X, SettingsManager.DEFAULT_UBER_X_COLOR, dp))
-        root.addView(createColorPickerSection("Comfort", SettingsManager.KEY_COLOR_COMFORT, SettingsManager.DEFAULT_COMFORT_COLOR, dp))
-        root.addView(createColorPickerSection("Black", SettingsManager.KEY_COLOR_BLACK, SettingsManager.DEFAULT_BLACK_COLOR, dp))
-        root.addView(createColorPickerSection("Flash", SettingsManager.KEY_COLOR_FLASH, SettingsManager.DEFAULT_FLASH_COLOR, dp))
+        root.addView(createColorPickerSection("99Pop", SettingsManager.KEY_COLOR_99_POP, SettingsManager.DEFAULT_99_POP_COLOR, dp))
+        root.addView(createColorPickerSection("99Comfort", SettingsManager.KEY_COLOR_COMFORT, SettingsManager.DEFAULT_COMFORT_COLOR, dp))
+        root.addView(createColorPickerSection("99Taxi", SettingsManager.KEY_COLOR_TAXI, SettingsManager.DEFAULT_TAXI_COLOR, dp))
+        root.addView(createColorPickerSection("99Negocia", SettingsManager.KEY_COLOR_NEGOCIA, SettingsManager.DEFAULT_NEGOCIA_COLOR, dp))
+        root.addView(createColorPickerSection("99Entrega", SettingsManager.KEY_COLOR_ENTREGA, SettingsManager.DEFAULT_ENTREGA_COLOR, dp))
 
         // Rating Colors
         root.addView(TextView(this).apply { text = "Cores das Avaliações (Bordas)"; setTextColor(Color.WHITE); textSize = 18f; setPadding(0, dp(30), 0, dp(10)) })

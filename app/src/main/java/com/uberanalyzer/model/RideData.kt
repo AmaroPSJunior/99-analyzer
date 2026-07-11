@@ -3,17 +3,20 @@ package com.uberanalyzer.model
 data class RideData(val price: Double, val distanceKm: Double, val timeMin: Int, val category: RideCategory, val raw: String)
 
 enum class RideCategory(val displayName: String, val weight: Double, val colorHex: String) {
-    UBER_X("UberX", 1.0, "#F2121212"), 
-    COMFORT("Comfort", 1.3, "#F21A237E"), 
-    BLACK("Black", 1.6, "#F2000000"), 
-    FLASH("Flash", 0.9, "#F2E65100"),
-    UNKNOWN("Uber", 1.0, "#F2121212");
+    POP("99Pop", 1.0, "#FFFBC02D"), 
+    COMFORT("99Comfort", 1.3, "#F21A237E"), 
+    TAXI("99Taxi", 1.1, "#F2FF9800"), 
+    NEGOCIA("99Negocia", 1.0, "#F24CAF50"),
+    ENTREGA("99Entrega", 0.9, "#F2E65100"),
+    UNKNOWN("99", 1.0, "#FFFBC02D");
     companion object {
         fun fromString(s: String) = when {
-            s.contains("Black", true) -> BLACK
             s.contains("Comfort", true) -> COMFORT
-            s.contains("Flash", true) -> FLASH
-            else -> UBER_X
+            s.contains("Taxi", true) -> TAXI
+            s.contains("Negocia", true) -> NEGOCIA
+            s.contains("Entrega", true) -> ENTREGA
+            s.contains("Pop", true) -> POP
+            else -> UNKNOWN
         }
     }
 }

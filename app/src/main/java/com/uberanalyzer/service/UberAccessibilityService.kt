@@ -17,14 +17,14 @@ class UberAccessibilityService : AccessibilityService() {
     
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
         val pkg = event.packageName?.toString() ?: ""
-        if (!pkg.contains("ubercab")) return
+        if (!pkg.contains("taxis99") && !pkg.contains("didiglobal")) return
 
         if (event.eventType != AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED && 
             event.eventType != AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) return
 
         if (System.currentTimeMillis() - lastLogTime > 10000) {
             lastLogTime = System.currentTimeMillis()
-            sendDebugLog("Vigiando Uber [Turbo Mode]...")
+            sendDebugLog("Vigiando 99 [Turbo Mode]...")
         }
 
         // Quick return for the Accessibility Thread
@@ -116,7 +116,7 @@ class UberAccessibilityService : AccessibilityService() {
 
     override fun onServiceConnected() {
         super.onServiceConnected()
-        sendDebugLog("Leitor pronto para detectar Uber!")
+        sendDebugLog("Leitor pronto para detectar 99!")
     }
 
     companion object {

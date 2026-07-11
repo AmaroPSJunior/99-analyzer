@@ -12,7 +12,7 @@ import com.uberanalyzer.parser.RideParser
 class UberNotificationService : NotificationListenerService() {
     companion object {
         var isRunning = false
-        var lastCapturedText = "Nenhuma notificação da Uber detectada ainda."
+        var lastCapturedText = "Nenhuma notificação da 99 detectada ainda."
         var notificationCount = 0
     }
 
@@ -29,8 +29,8 @@ class UberNotificationService : NotificationListenerService() {
     override fun onNotificationPosted(sbn: StatusBarNotification?) {
         val pkg = sbn?.packageName ?: return
         
-        // Capture ANYTHING related to Uber for diagnostic
-        if (pkg.contains("uber", ignoreCase = true)) {
+        // Capture ANYTHING related to 99 / DiDi for diagnostic
+        if (pkg.contains("taxis99", ignoreCase = true) || pkg.contains("didiglobal", ignoreCase = true)) {
             notificationCount++
             val notification = sbn.notification ?: return
             val extras = notification.extras ?: return

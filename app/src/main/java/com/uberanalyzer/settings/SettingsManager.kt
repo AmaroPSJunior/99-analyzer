@@ -13,10 +13,11 @@ class SettingsManager(context: Context) {
         const val KEY_MIN_HOUR_VALUE = "min_hour_value"
         
         // Category Colors
-        const val KEY_COLOR_UBER_X = "color_uber_x"
-        const val KEY_COLOR_COMFORT = "color_comfort"
-        const val KEY_COLOR_BLACK = "color_black"
-        const val KEY_COLOR_FLASH = "color_flash"
+        const val KEY_COLOR_99_POP = "color_99_pop"
+        const val KEY_COLOR_COMFORT = "color_99_comfort"
+        const val KEY_COLOR_TAXI = "color_99_taxi"
+        const val KEY_COLOR_NEGOCIA = "color_99_negocia"
+        const val KEY_COLOR_ENTREGA = "color_99_entrega"
         
         // Rating Colors
         const val KEY_COLOR_EXCELLENT = "color_excellent"
@@ -28,10 +29,11 @@ class SettingsManager(context: Context) {
         const val DEFAULT_MIN_KM = 2.0f
         const val DEFAULT_MIN_HOUR = 45.0f
         
-        const val DEFAULT_UBER_X_COLOR = "#F2121212"
+        const val DEFAULT_99_POP_COLOR = "#FFFBC02D"
         const val DEFAULT_COMFORT_COLOR = "#F21A237E"
-        const val DEFAULT_BLACK_COLOR = "#F2000000"
-        const val DEFAULT_FLASH_COLOR = "#F2E65100"
+        const val DEFAULT_TAXI_COLOR = "#F2FF9800"
+        const val DEFAULT_NEGOCIA_COLOR = "#F24CAF50"
+        const val DEFAULT_ENTREGA_COLOR = "#F2E65100"
         
         const val DEFAULT_EXCELLENT_COLOR = "#4CAF50"
         const val DEFAULT_GOOD_COLOR = "#8BC34A"

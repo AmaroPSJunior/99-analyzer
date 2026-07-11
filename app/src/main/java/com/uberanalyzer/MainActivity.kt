@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         val scrollView = ScrollView(this).apply { setBackgroundColor(Color.parseColor("#121212")); isFillViewport = true }
         val root = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(20), dp(40), dp(20), dp(20)); gravity = Gravity.CENTER_HORIZONTAL }
 
-        root.addView(TextView(this).apply { text = "Uber Analyzer 1.0"; setTextColor(Color.WHITE); textSize = 22f; typeface = Typeface.DEFAULT_BOLD })
+        root.addView(TextView(this).apply { text = "99 Analyzer 1.0"; setTextColor(Color.WHITE); textSize = 22f; typeface = Typeface.DEFAULT_BOLD })
         
         // Battery Warning
         root.addView(TextView(this).apply { 
@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
 
         root.addView(TextView(this).apply { text = "🔍 O que o leitor está vendo:"; setTextColor(Color.MAGENTA); setPadding(0, dp(20), 0, dp(5)) })
         lastLogView = TextView(this).apply {
-            text = "Aguardando dados da Uber..."; setTextColor(Color.GREEN); setBackgroundColor(Color.BLACK)
+            text = "Aguardando dados da 99..."; setTextColor(Color.GREEN); setBackgroundColor(Color.BLACK)
             setPadding(dp(10), dp(10), dp(10), dp(10)); layoutParams = LinearLayout.LayoutParams(-1, dp(150))
             textSize = 10f; typeface = Typeface.MONOSPACE
         }

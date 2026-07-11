@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Uber Analyzer</string>
-    <string name="app_title">🚗 Uber Ride Analyzer</string>
+    <string name="app_name">99 Analyzer</string>
+    <string name="app_title">🚗 99 Ride Analyzer</string>
     <string name="app_subtitle">Analyze rides in real-time</string>
     <string name="notif_access">Notification Access</string>
     <string name="overlay_access">Draw Over Apps</string>
@@ -13,7 +13,7 @@
     <string name="btn_enable_overlay">Enable Overlay Permission</string>
     <string name="how_it_works">How It Works</string>
     <string name="step_1">1️⃣ Enable both permissions above</string>
-    <string name="step_2">2️⃣ Open the Uber Driver app normally</string>
+    <string name="step_2">2️⃣ Open the 99 Motorista app normally</string>
     <string name="step_3">3️⃣ When a ride request arrives, we capture it</string>
     <string name="step_4">4️⃣ Price, distance &amp; time are parsed automatically</string>
     <string name="step_5">5️⃣ A score overlay appears with a sound alert</string>

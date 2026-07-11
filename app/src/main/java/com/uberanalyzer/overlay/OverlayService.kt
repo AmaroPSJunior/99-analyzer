@@ -41,7 +41,7 @@ class OverlayService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val ch = NotificationChannel("ovl_v2", "Overlay", NotificationManager.IMPORTANCE_LOW)
             getSystemService(NotificationManager::class.java).createNotificationChannel(ch)
-            val n = NotificationCompat.Builder(this, "ovl_v2").setContentTitle("Uber Analyzer Ativo").setSmallIcon(android.R.drawable.ic_menu_compass).build()
+            val n = NotificationCompat.Builder(this, "ovl_v2").setContentTitle("99 Analyzer Ativo").setSmallIcon(android.R.drawable.ic_menu_compass).build()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) startForeground(1005, n, ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
             else startForeground(1005, n)
         }
@@ -58,16 +58,17 @@ class OverlayService : Service() {
     private fun show(i: Intent, r: ScoreRating) {
         hide()
         val settings = com.uberanalyzer.settings.SettingsManager(this)
-        val catName = i.getStringExtra(EXTRA_CATEGORY) ?: "Uber"
+        val catName = i.getStringExtra(EXTRA_CATEGORY) ?: "99"
         val cat = com.uberanalyzer.model.RideCategory.fromString(catName)
         
         // Dynamic colors from settings
         val catColorKey = when(cat) {
-            com.uberanalyzer.model.RideCategory.UBER_X -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_UBER_X
+            com.uberanalyzer.model.RideCategory.POP -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_99_POP
             com.uberanalyzer.model.RideCategory.COMFORT -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_COMFORT
-            com.uberanalyzer.model.RideCategory.BLACK -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_BLACK
-            com.uberanalyzer.model.RideCategory.FLASH -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_FLASH
-            else -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_UBER_X
+            com.uberanalyzer.model.RideCategory.TAXI -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_TAXI
+            com.uberanalyzer.model.RideCategory.NEGOCIA -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_NEGOCIA
+            com.uberanalyzer.model.RideCategory.ENTREGA -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_ENTREGA
+            else -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_99_POP
         }
         val ratingColorKey = when(r) {
             com.uberanalyzer.model.ScoreRating.EXCELLENT -> com.uberanalyzer.settings.SettingsManager.KEY_COLOR_EXCELLENT

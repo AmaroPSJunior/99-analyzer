@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Uber Analisador</string>
-    <string name="app_title">🚗 Analisador de Corridas Uber</string>
+    <string name="app_name">99 Analisador</string>
+    <string name="app_title">🚗 Analisador de Corridas 99</string>
     <string name="app_subtitle">Analise corridas em tempo real</string>
     <string name="notif_access">Acesso a Notificações</string>
     <string name="overlay_access">Sobreposição de Tela</string>
@@ -13,7 +13,7 @@
     <string name="btn_enable_overlay">Ativar Permissão de Sobreposição</string>
     <string name="how_it_works">Como Funciona</string>
     <string name="step_1">1️⃣ Ative as duas permissões acima</string>
-    <string name="step_2">2️⃣ Abra o app Uber Driver normalmente</string>
+    <string name="step_2">2️⃣ Abra o app 99 Motorista normalmente</string>
     <string name="step_3">3️⃣ Quando chegar uma corrida, nós capturamos</string>
     <string name="step_4">4️⃣ Preço, distância e tempo são extraídos</string>
     <string name="step_5">5️⃣ Um overlay aparece com o score e som</string>
